@@ -1,2 +1,3 @@
-# FindMeApp
-HackUDC 2025
+# findmeapp
+
+A new Flutter project.
