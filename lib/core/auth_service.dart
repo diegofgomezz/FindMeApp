@@ -9,7 +9,7 @@ class AuthService {
   /// ✅ Obtener un nuevo `id_token` y `access_token`
   Future<void> fetchAndStoreTokens() async {
     final url = Uri.parse(Config.authUrl);
-    final basicAuth = 'Basic ' + base64Encode(utf8.encode('${Config.clientId}:${Config.clientSecret}'));
+    final basicAuth = 'Basic ${base64Encode(utf8.encode('${Config.clientId}:${Config.clientSecret}'))}';
 
     final headers = {
       'Authorization': basicAuth,

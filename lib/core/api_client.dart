@@ -9,9 +9,7 @@ class ApiClient {
   Future<dynamic> get(String endpoint) async {
     String? token = await _authService.getStoredIdToken(); // ✅ Primero intentamos con `id_token`
 
-    if (token == null) {
-      token = await _authService.getStoredAccessToken(); // ✅ Si `id_token` no funciona, usamos `access_token`
-    }
+    token ??= await _authService.getStoredAccessToken();
 
     if (token == null) {
       print("❌ No se pudo obtener un token válido.");

@@ -12,7 +12,7 @@ class ProductoService {
       return [];
     }
 
-    // 🔥 Asegurar que la URL del endpoint tiene `/` antes de `products`
+    // 🔥 Asegurar que la URL del endpoint tiene / antes de products
     final endpoint = '/products?image=$imageUrl';
 
     print("📌 Haciendo petición GET a: ${Config.sandboxBaseUrl}$endpoint");
@@ -22,7 +22,7 @@ class ProductoService {
     print("📌 Respuesta de la API: $data");
 
     if (data != null && data is List) {
-      return (data as List)
+      return (data)
           .map((json) => Producto.fromJson(json))
           .toList();
     }
