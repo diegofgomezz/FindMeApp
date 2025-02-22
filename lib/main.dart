@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'views/product_page.dart';
+import 'package:provider/provider.dart';
 import 'providers/product_provider.dart';
 
 void main() {
@@ -19,10 +19,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Inditex API App',
-      home: ProductoPage(),
+      title: 'Inditex App',
+      home: const ProductoPage(),
     );
   }
 }
